@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+
+# Ignore models and figs
+models/
+figs/
+runs/
+results/
+media/
+visualization_report/
+
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
