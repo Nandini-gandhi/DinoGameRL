@@ -119,8 +119,7 @@ These helper scripts were used  during report preparation to export clean versio
 
 ## 3. File Overview and Line Counts
 
-The table below lists each source file, its purpose, and its line count
-(line counts include comments and blank lines).
+The table below lists each source file, its purpose, and its line count.
 
 ### Core code (`src/`)
 
@@ -134,9 +133,5 @@ The table below lists each source file, its purpose, and its line count
 | `src/final_evaluation.py`           |  285  | Loads the final trained models and performs a **large evaluation** over many episodes; logs per‑episode results and writes a summary CSV in `results/final_evaluation_summary.csv`.                                                                        |
 | `src/analyze_results.py`            |  281  | Reads the logs and summary CSVs, computes statistics (including non‑parametric tests from `scipy.stats`), and generates learning curves and comparison plots saved under `figs/` and `results/`.                                                           |
 | `src/plot_enhanced_results.py`      |  284  | Produces “enhanced” plots that match the report (episode‑wise curves, checkpoint curves, and final comparisons) using the detailed logs from `train_with_episode_logging.py` and `final_evaluation.py`.                                                    |
-
-| ----------------------------------------------- | :---: | ------------------------------------------------------------------------------------------------------------------------------------------------ | - |
 | `src/extras/create_report_visualizations.py`    |  467  | Additional plotting script used to format and export figures for the written report. Not required for reproducing experiments from logs.         |   |
 | `src/extras/create_report_visualizations_v2.py` |  354  | Refined version of the above, used to generate cleaner versions of some report figures. Also not required for reproducing experiments from logs. |   |
-
-
