@@ -108,7 +108,7 @@ These scripts read from `runs/` and `results/` and save plots into `figs/`.
 
 ### 2.5 Report‑only visualizations (used for preparing the report)
 
-During the project, I used two additional plotting scripts to generate some of the figures that appear in the written report. These helper files were used only for formatting and exporting polished figures for the report and were **not added to the submitted repository**:
+During the project, I used two additional plotting scripts to generate some of the figures that appear in the written report.
 
 * `create_report_visualizations.py`
 * `create_report_visualizations_v2.py`
@@ -133,5 +133,5 @@ The table below lists each source file, its purpose, and its line count.
 | `src/final_evaluation.py`           |  285  | Loads the final trained models and performs a **large evaluation** over many episodes; logs per‑episode results and writes a summary CSV in `results/final_evaluation_summary.csv`.                                                                        |
 | `src/analyze_results.py`            |  281  | Reads the logs and summary CSVs, computes statistics (including non‑parametric tests from `scipy.stats`), and generates learning curves and comparison plots saved under `figs/` and `results/`.                                                           |
 | `src/plot_enhanced_results.py`      |  284  | Produces “enhanced” plots that match the report (episode‑wise curves, checkpoint curves, and final comparisons) using the detailed logs from `train_with_episode_logging.py` and `final_evaluation.py`.                                                    |
-| `src/extras/create_report_visualizations.py`    |  467  | Additional plotting script used to format and export figures for the written report. Not required for reproducing experiments from logs.         |   |
-| `src/extras/create_report_visualizations_v2.py` |  354  | Refined version of the above, used to generate cleaner versions of some report figures. Also not required for reproducing experiments from logs. |   |
+| `src/extras/create_report_visualizations.py`    |  257  | Additional plotting script used to format and export figures for the written report. Not required for reproducing experiments from logs.         |   |
+| `src/extras/create_report_visualizations_v2.py` |  254  | Refined version of the above, used to generate cleaner versions of some report figures. Also not required for reproducing experiments from logs. |   |
