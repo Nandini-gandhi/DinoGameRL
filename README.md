@@ -114,24 +114,3 @@ During the project, I used two additional plotting scripts to generate some of t
 * `create_report_visualizations_v2.py`
 
 These helper scripts were used  during report preparation to export clean versions of plots. All plots that can be reproduced directly from the experiment logs are generated through the main analysis scripts (`analyze_results.py` and `plot_enhanced_results.py`).
-
----
-
-## 3. File Overview and Line Counts
-
-The table below lists each source file, its purpose, and its line count.
-
-### Core code (`src/`)
-
-| Path                                | Lines | Description                                                                                                                                                                                                                                                |
-| ----------------------------------- | :---: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/dino_local_env.py`             |  362  | Custom **Gymnasium** environment for Chrome Dino (game logic, observation and reward design, rendering with `pygame`/PIL, and a `make_dino_env` helper used by the training scripts).                                                                      |
-| `src/train_dqn_dino.py`             |  103  | Trains a baseline **DQN** agent on the Dino environment, logs simple metrics to `runs/metrics_dino.csv`, saves a model in `models/`, and records short evaluation videos in `media/`.                                                                      |
-| `src/train_ppo_dino.py`             |  105  | Trains a baseline **PPO** agent on the same environment, with the same logging, model saving, and video recording behaviour as the DQN baseline.                                                                                                           |
-| `src/baseline_random_dino.py`       |   39  | Runs a **random policy** on the Dino environment to provide a simple baseline; logs scores to `runs/metrics_dino.csv` and records videos in `media/`.                                                                                                      |
-| `src/train_with_episode_logging.py` |  335  | Main training script for DQN and PPO with **episode‑level logging** and regular **checkpoint evaluations**; produces detailed logs in `runs/training_episodes.csv` and `runs/metrics_dino_checkpoints.csv` and saves checkpoint/final models in `models/`. |
-| `src/final_evaluation.py`           |  285  | Loads the final trained models and performs a **large evaluation** over many episodes; logs per‑episode results and writes a summary CSV in `results/final_evaluation_summary.csv`.                                                                        |
-| `src/analyze_results.py`            |  281  | Reads the logs and summary CSVs, computes statistics (including non‑parametric tests from `scipy.stats`), and generates learning curves and comparison plots saved under `figs/` and `results/`.                                                           |
-| `src/plot_enhanced_results.py`      |  284  | Produces “enhanced” plots that match the report (episode‑wise curves, checkpoint curves, and final comparisons) using the detailed logs from `train_with_episode_logging.py` and `final_evaluation.py`.                                                    |
-| `src/extras/create_report_visualizations.py`    |  257  | Additional plotting script used to format and export figures for the written report. Not required for reproducing experiments from logs.         |   |
-| `src/extras/create_report_visualizations_v2.py` |  254  | Refined version of the above, used to generate cleaner versions of some report figures. Also not required for reproducing experiments from logs. |   |
