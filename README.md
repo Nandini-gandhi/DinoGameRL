@@ -106,11 +106,5 @@ python src/plot_enhanced_results.py
 
 These scripts read from `runs/` and `results/` and save plots into `figs/`.
 
-### 2.5 Report‑only visualizations (used for preparing the report)
-
 During the project, I used two additional plotting scripts to generate some of the figures that appear in the written report.
-
-* `create_report_visualizations.py`
-* `create_report_visualizations_v2.py`
-
 These helper scripts were used  during report preparation to export clean versions of plots. All plots that can be reproduced directly from the experiment logs are generated through the main analysis scripts (`analyze_results.py` and `plot_enhanced_results.py`).
